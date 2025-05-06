@@ -1,0 +1,7 @@
+label {
+    color: #0a0d1b;
+    margin-right: 10px;
+}
+::placeholder{
+    color: #9eb4d8;
+}
