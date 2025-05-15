@@ -1,15 +1,14 @@
-import reactLogo from '../../assets/react.svg'
-import './lesson01.css'
+import reactLogo from '../../assets/react.svg';
+import './Lesson01.css';
 
 function Lesson01() {
-
-    return (
-      <div className='react-container'>
+  return (
+    <div className="react-container">
       <img src="/vite.svg" alt="" />
       <img src={reactLogo} alt="" />
-      <h1>Hello, Reakt!</h1>
-      </div>
-    )
-  }
+      <h1>Hello, React ⚡️</h1>
+    </div>
+  );
+}
 
-  export default Lesson01
+export default Lesson01;

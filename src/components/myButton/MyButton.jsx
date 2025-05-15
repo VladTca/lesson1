@@ -1,15 +1,7 @@
-import "./MyButton.css";
+import './MyButton.css';
 
-function MyButton({
-  text = "Click me..",
-  type = "button",
-  func = () => console.log("clicked"),
-}) {
-  return (
-    <button type={type} className="my-button" onClick={func}>
-      {text}
-    </button>
-  );
+function MyButton({ text = 'Click me..', type = 'button', func = () => console.log('click!') }) {
+  return <button onClick={func} type={type} className="my-button">{text}</button>;
 }
 
 export default MyButton;
