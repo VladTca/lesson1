@@ -1,3 +1,4 @@
+import React from "react";
 import MyButton from "../../components/myButton/MyButton";
 
 export default function Lesson07() {

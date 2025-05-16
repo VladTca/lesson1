@@ -1,11 +1,13 @@
 import './App.css'
-import Lesson07 from "./lessons/lesson07/Lesson07";
+
+import Homework08 from "./homework/homework08/Homework08";
+import React from 'react';
 
 function App() {
 
   return (
     <>
-      <Lesson07/>
+     <Homework08/>
     </>
   )
 }
