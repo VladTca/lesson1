@@ -1,5 +1,5 @@
 import Homework01 from "../../homework/homework01/Homework01.jsx";
-import "./ProfileCard.css";
+import styles from "./ProfileCard.module.css";
 
 function ProfileCard() {
   const defaultUser = {
@@ -10,7 +10,7 @@ function ProfileCard() {
   return (
     <div>
       <Homework01 />
-      <h2>
+      <h2 className={styles.heading}>
         Я работаю с программистом {defaultUser.name} на фирме {defaultUser.firma}
       </h2>
     </div>

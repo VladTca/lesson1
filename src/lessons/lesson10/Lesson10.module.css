@@ -1,0 +1,38 @@
+.container {
+  padding: 20px;
+}
+
+.heading {
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.factsContainer {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-height: 700px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.factItem {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}

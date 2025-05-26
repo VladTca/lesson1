@@ -1,21 +1,8 @@
 #root {
-  /* прибиваем footer к низу и делаем адаптивным под размер контента в main */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* стандартные значения пришедшие из vite */
-  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
-}
-
-.lesson-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1 {
-  color: white;
 }
 
 .logo {
@@ -24,11 +11,9 @@ h1 {
   will-change: filter;
   transition: filter 300ms;
 }
-
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -37,7 +22,6 @@ h1 {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }

@@ -1,5 +1,5 @@
 import katLogo from './Image20250430131023.png'
-import './homework01.css'
+import styles from './homework01.module.css'
 
 function Homework01() {
 

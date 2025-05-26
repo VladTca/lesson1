@@ -1,0 +1,25 @@
+/* в css modules мы не работаем с селекторами по тегам - пишите селектор по классам */
+
+.heading {
+  color: orange;
+}
+
+.info {
+  font-style: italic;
+}
+
+.ul {
+  list-style: none;
+}
+
+.ul>li::before {
+  content: '⚡️ ';
+}
+
+.experimental>button {
+  background-color: deeppink;
+}
+
+.experimental>button:hover {
+  background-color: rgb(252, 69, 167);
+}

@@ -1,0 +1,8 @@
+.label {
+    color: #0a0d1b;
+    margin-right: 10px;
+}
+
+.input::placeholder {
+    color: #9eb4d8;
+}

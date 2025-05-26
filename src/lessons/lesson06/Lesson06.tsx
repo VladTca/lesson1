@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Lesson06() {
   // ! typescript
 
