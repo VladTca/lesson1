@@ -1,7 +1,7 @@
 import styles from './ProductPage.module.css'
-import { useEffect, useState, type JSX } from 'react';
-import { Link, useParams } from "react-router-dom";
-import type { IProduct } from "../products/types";
+import React, {type JSX, useEffect, useState} from 'react';
+import {Link, useParams} from "react-router-dom";
+import type {IProduct} from "../products/types";
 import Loader from "../loader/Loader";
 
 const initialState: IProduct = {

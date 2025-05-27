@@ -17,6 +17,8 @@ import FormGender from "./components/formGender/FormGender";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import Lesson14 from "./lessons/lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
+import Store from "./components/store/Store";
+import StorePage from "./components/store/StorePage";
 import React from 'react';
 
 const routes = [
@@ -31,6 +33,14 @@ const routes = [
   {
     path: 'feedback',
     element: <Feedback />
+  },
+  {
+    path: 'store',
+    element: <Store />
+  },
+  {
+    path: 'store/:id',
+    element: <StorePage />
   },
   {
     path: '*',

@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import styles from './ProductCard.module.css';
-import type { JSX } from 'react';
+import type {JSX} from 'react';
+import React from "react";
 
 interface IProductCardProps {
   id: number,

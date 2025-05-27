@@ -1,11 +1,13 @@
-import { NavLink, Outlet } from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 import styles from './Layout.module.css';
+import React from "react";
 
 const navLinks = [
   { to: '/', title: 'Home' },
   { to: 'fetch-fox', title: 'Fetch fox' },
   { to: 'feedback', title: 'Feedback' },
   { to: 'form-gender', title: 'Gender form' },
+  { to: 'store', title: 'Store' },
 ];
 
 export default function Layout() {
@@ -25,4 +27,3 @@ export default function Layout() {
     </>
   );
 }
-
