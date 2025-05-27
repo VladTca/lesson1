@@ -1,4 +1,5 @@
-import type { JSX } from "react";
+import type {JSX} from "react";
+import React from "react";
 import styles from './MyButton.module.css';
 import cn from 'classnames';
 
@@ -7,7 +8,7 @@ interface IMyButtonProps {
   text?: string;
   type?: 'button' | 'submit' | 'reset';
   // описываем функцию внутри объекта
-  func?: () => void;
+  func?: (event:React.MouseEvent) => void;
   // кнопка активная или нет
   disabled?: boolean,
   variant?: 'primary' | 'danger' | 'success';

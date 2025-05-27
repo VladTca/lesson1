@@ -20,6 +20,9 @@ import ProductPage from "./components/productPage/ProductPage";
 import Store from "./components/store/Store";
 import StorePage from "./components/store/StorePage";
 import React from 'react';
+import {CartProvider} from "./context/CartContext";
+import Products from "./components/products/Products";
+import Cart from "./components/cart/Cart";
 
 const routes = [
   {
@@ -104,12 +107,20 @@ const routes = [
   },
   {
     element: <ProductPage />,
-    path: 'Dynamic-routing/:id'
+    path: 'products/:id'
   },
   {
     element: <FormGender/>,
     path: 'form-gender'
   },
+  {
+    element: <Cart />,
+    path: 'cart'
+  },
+  {
+    element: <Products />,
+    path: 'products'
+  }
 ];
 
 function App() {
@@ -118,6 +129,7 @@ function App() {
     // 1. оборачиваем все приложение в HashRouter
     // 2. все маршруты оборачиваем в Routes
     // 3. начинаем описывать структуру с корневого маршрута с Layout
+      <CartProvider>
     <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -127,6 +139,7 @@ function App() {
         </Route>
       </Routes>
     </HashRouter>
+      </CartProvider>
   );
 }
 

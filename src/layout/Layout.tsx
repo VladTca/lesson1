@@ -8,6 +8,9 @@ const navLinks = [
   { to: 'feedback', title: 'Feedback' },
   { to: 'form-gender', title: 'Gender form' },
   { to: 'store', title: 'Store' },
+    { to: 'products', title: 'Products' },
+    { to: 'cart', title: 'Cart' },
+
 ];
 
 export default function Layout() {
