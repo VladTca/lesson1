@@ -2,7 +2,7 @@
 import React, {createContext, useContext, useState} from "react";
 
 // типизация элемента корзины
-interface ICartItem {
+export interface ICartItem {
     id: number;
     title: string;
     price: number;
