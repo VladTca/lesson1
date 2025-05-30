@@ -1,0 +1,44 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  color: #811919;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  border-bottom: 2px solid #D56118;
+  padding-bottom: 10px;
+}
+
+.childrenContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.childrenContainer h4 {
+  color: #D56118;
+  margin: 10px 0;
+}
+
+.childrenContainer h2 {
+  color: #333;
+  margin: 10px 0;
+}
+
+.childrenContainer p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.childrenContainer h3 {
+  color: #555;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 15px;
+}
