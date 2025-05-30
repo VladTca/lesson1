@@ -21,8 +21,10 @@ import Store from "./components/store/Store";
 import StorePage from "./components/store/StorePage";
 import React from 'react';
 import {CartProvider} from "./context/CartContext";
+import {ProductProvider} from "./context/ProductContext";
 import Products from "./components/products/Products";
 import Cart from "./components/cart/Cart";
+import Lesson17 from "./lessons/lesson17/Lesson17";
 
 const routes = [
   {
@@ -106,6 +108,10 @@ const routes = [
     path: 'Dynamic-routing'
   },
   {
+    element: <Lesson17 />,
+    path: 'Context'
+  },
+  {
     element: <ProductPage />,
     path: 'products/:id'
   },
@@ -129,17 +135,19 @@ function App() {
     // 1. оборачиваем все приложение в HashRouter
     // 2. все маршруты оборачиваем в Routes
     // 3. начинаем описывать структуру с корневого маршрута с Layout
-      <CartProvider>
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          {routes.map(route => (
-            <Route path={route.path} element={route.element} />
-          ))}
-        </Route>
-      </Routes>
-    </HashRouter>
-      </CartProvider>
+      <ProductProvider>
+        <CartProvider>
+          <HashRouter>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                {routes.map(route => (
+                  <Route key={route.path} path={route.path} element={route.element} />
+                ))}
+              </Route>
+            </Routes>
+          </HashRouter>
+        </CartProvider>
+      </ProductProvider>
   );
 }
 
