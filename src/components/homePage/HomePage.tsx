@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import styles from './HomePage.module.css'
+import React from "react";
 
 const lessons = [
   {
@@ -57,6 +58,10 @@ const lessons = [
   {
     id: 14,
     title: 'Dynamic-routing'
+  },
+  {
+    id: 17,
+    title: 'Context'
   },
 ]
 

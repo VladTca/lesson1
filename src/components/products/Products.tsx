@@ -1,36 +1,13 @@
 import type {JSX} from "react";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import styles from "./Products.module.css";
 import ProductCard from "../productCard/ProductCard";
 import Loader from "../loader/Loader";
-import type {IProduct} from "./types";
+import {useProducts} from "../../context/ProductContext";
 
 
 export default function Products(): JSX.Element {
-  const [products, setProducts] = useState<IProduct[]>([]);
-  const [limit, setLimit] = useState("5");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-
-  const getProducts = async () => {
-    setIsLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 500));
-    try {
-      const res = await fetch(`https://fakestoreapi.com/products?limit=${limit}`);
-      const data: IProduct[] = await res.json();
-      setProducts(data);
-      setError("");
-    } catch (err) {
-      console.error("Error fetching products:", err);
-      setError("Failed to fetch products. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getProducts();
-  }, []);
+  const { products, isLoading, error, limit, setLimit, fetchProducts } = useProducts();
 
   const handleLimitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLimit(e.target.value);
@@ -41,12 +18,10 @@ export default function Products(): JSX.Element {
 
     const numLimit = Number(limit);
     if (isNaN(numLimit) || numLimit < 1 || numLimit > 20) {
-      setError("Please enter a valid number between 1 and 20.");
       return;
     }
 
-    setError("");
-    getProducts();
+    fetchProducts();
   };
 
   return (
