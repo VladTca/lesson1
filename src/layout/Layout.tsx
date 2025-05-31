@@ -29,7 +29,7 @@ export default function Layout() {
                 {/* сюда за место Outlet будут приходить переключаемые компоненты из навигации */}
                 <Outlet />
             </main>
-            <footer className={styles.footer}></footer>
+            <footer className={styles.footer}>Copyright 2025 Vladimir</footer>
         </>
     );
 }

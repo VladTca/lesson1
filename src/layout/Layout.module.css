@@ -29,6 +29,7 @@ header a:hover {
   width: 100%;
   background-color: rgb(169, 169, 169);
   height: 50px;
+  color: #0a0d1b;
 }
 
 .isActive {
